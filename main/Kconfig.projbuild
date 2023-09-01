@@ -1,0 +1,29 @@
+menu "Mesh Configuration"
+
+    config MESH_DEVICE_IS_ROOT
+        bool "This Device is the Root"
+        default n
+        help
+            Set This as the Root Device of the Mesh.
+
+    config MESH_NETWORK_ID
+        hex "Mesh Network ID"
+        range 0x00 0xFF
+        default 0xAA
+        help
+            Set the Network ID of the Mesh.
+
+    config MESH_NETWORK_PASSWORD
+        string "Mesh Network Password"
+        default "nEmvPNq4fSePz76.Alba"
+        help
+            Set the Network Password of the Mesh.
+
+    config MESH_NETWORK_CHANNEL
+        int "Mesh Wireless Channel"
+        range 1 11
+        default 1
+        help
+            Set the Mesh Network Channel of the Mesh (1, 6, 11 is recommended).
+
+endmenu
